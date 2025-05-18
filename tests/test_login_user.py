@@ -13,7 +13,7 @@ class TestLoginUser:
         assert response.status_code == 200 and response.json()['success'] == True
 
     @allure.title('Проверка авторизации пользователя с неверным паролем')
-    def test__authorization_user_wrong_password(self):
+    def test_authorization_user_wrong_password(self):
         payload = generate_users()
         create_user(payload)
         del payload['name']

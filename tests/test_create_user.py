@@ -7,10 +7,8 @@ from user_data import generate_users
 
 class TestCreateUser:
     @allure.title('Проверка создания нового пользователя')
-    def test_create_user(self):
-        payload = generate_users()
-        created_data = create_user(payload)
-        delete_user(created_data)
+    def test_create_user(self, create_and_delete_user):
+        created_data = create_and_delete_user
         assert created_data.status_code == 200 and 'accessToken' in created_data.text
 
 

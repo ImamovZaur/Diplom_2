@@ -21,16 +21,6 @@ def generate_user_static_data():
     }
     return payload
 
-
-def generate_user_static_data():
-    payload = {
-        'email': 'practicum@ya.ru',
-        'password': '1234567',
-        'name': 'Naruto'
-    }
-    return payload
-
-
 def generate_email():
     fake = Faker()
     email = fake.email()

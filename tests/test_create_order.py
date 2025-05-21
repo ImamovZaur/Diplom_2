@@ -22,7 +22,7 @@ class TestCreateOrder:
     @allure.title('Создание заказа с неправильным хэшем ингредиентов')
     def test_create_order_incorrect_hash_ingredient(self):
         response = requests.post(Urls.CREATE_ORDER_URL, data=Ingredient.incorrect_ingredients_data)
-        assert response.status_code == 500 and 'Internal Server Error' in response.text
+        assert response.status_code == 500 and ErrorMessage.TEXT_ORDER_500 in response.text
 
     @allure.title('Создание заказа с ингредиентами')
     def test_create_order_with_ingredient(self):

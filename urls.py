@@ -19,3 +19,4 @@ class ErrorMessage:
     TEXT_UPDATE_401 = "You should be authorised"
     TEXT_ORDER_WITHOUT_INGREDIENTS = "Ingredient ids must be provided"
     TEXT_GET_ORDERS_NO_AUTH = "You should be authorised"
+    TEXT_ORDER_500 = 'Internal Server Error'
